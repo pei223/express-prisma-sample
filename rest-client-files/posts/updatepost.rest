@@ -1,0 +1,19 @@
+### Normal
+PUT http://localhost:3000/api/v1/posts/6/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyMyIsImlhdCI6MTYzMTEwNjQyOSwiZXhwIjoxNjMxNTM4NDI5fQ.uHG25dDr9JzsGE9lWXEnl9FvHI9dbMY1VU66JYsdVnU
+
+{
+  "title": "testtitle",
+  "content": "test contentか？？？"
+}
+
+
+### No authorization header
+PUT http://localhost:3000/api/v1/posts/6/ HTTP/1.1
+content-type: application/json
+
+{
+  "title": "testtitle",
+  "content": "test contentか？？？"
+}

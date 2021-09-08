@@ -1,0 +1,30 @@
+### Normal
+POST http://localhost:3000/api/v1/posts/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyMyIsImlhdCI6MTYzMDMyODA2MSwiZXhwIjoxNjMwNzYwMDYxfQ.REx3QSrdTeNPW3SNkOXD1RLrXDcnK3NTriOJZGs-mAo
+
+{
+  "title": "testtitle",
+  "content": "test contentだよ"
+}
+
+
+### Invalid token
+POST http://localhost:3000/api/v1/posts/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3R1c2VyMyIsImlhdCI6MTYzMDMyODA2MSwiZXhwIjoxafdNjMwNzYwMDYxfQ.REx3QSrdfdsaTeNPW3SNkOXD1RLrXDcnK3NTriOJZGs-mAo
+
+{
+  "title": "testtitle",
+  "content": "test contentだよ"
+}
+
+
+### No authorization header
+POST http://localhost:3000/api/v1/posts/ HTTP/1.1
+content-type: application/json
+
+{
+  "title": "testtitle",
+  "content": "test contentだよ"
+}

@@ -1,0 +1,10 @@
+title: エラーレスポンス
+type: object
+properties:
+  errors:
+    type: array
+    items:
+      type: object
+      properties:
+        code:
+          type: string

@@ -1,0 +1,8 @@
+### Normal
+GET http://localhost:3000/api/v1/posts/5/ HTTP/1.1
+content-type: application/json
+
+
+### No data
+GET http://localhost:3000/api/v1/posts/231798471987/ HTTP/1.1
+content-type: application/json

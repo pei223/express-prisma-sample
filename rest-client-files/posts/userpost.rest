@@ -1,0 +1,8 @@
+### Normal
+GET http://localhost:3000/api/v1/users/testuser3/posts/ HTTP/1.1
+content-type: application/json
+
+
+### No exist user
+GET http://localhost:3000/api/v1/users/fdsjalkfjslfa/posts/ HTTP/1.1
+content-type: application/json

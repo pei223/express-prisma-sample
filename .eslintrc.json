@@ -1,0 +1,56 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint/eslint-plugin", "prettier", "import"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/errors"
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts", ".js"]
+      }
+    }
+  },
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "sort-imports": 0,
+    "import/order": [2, { "alphabetize": { "order": "asc" } }],
+    "prettier/prettier": "error",
+    // log4jsを用いるのでconsole系はerrorにする
+    "no-console": ["error"],
+    "@typescript-eslint/no-var-requires": "off",
+    // importして型指定のみの場合にもはじかれるためoffにしている
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    // "@typescript-eslint/no-unused-vars": [
+    //   "error",
+    //   { "varsIgnorePattern": "^_$", "argsIgnorePattern": "^_$" }
+    // ],
+    // anyは許容
+    "@typescript-eslint/no-explicit-any": "off",
+
+    // 命名規則
+    "@typescript-eslint/naming-convention": [
+      "error",
+      // 基本キャメルケース
+      { "selector": "memberLike", "format": ["camelCase"] },
+      { "selector": "property", "format": ["camelCase"] },
+      // Enumはパスカルケース
+      { "selector": "enumMember", "format": ["PascalCase"] }
+    ],
+    // 戻り値がvoidの場合は省略許容
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  }
+}

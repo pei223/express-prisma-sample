@@ -1,0 +1,28 @@
+### Normal
+POST http://localhost:3000/api/v1/auth/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "testuser3",
+    "password": "testuser3"
+}
+
+
+### Invalid username
+POST http://localhost:3000/api/v1/auth/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "fdasklfj",
+    "password": "testuser3"
+}
+
+
+### Invalid password
+POST http://localhost:3000/api/v1/auth/login/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "testuser3",
+    "password": "testuser31"
+}
