@@ -10,22 +10,14 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
     "editor.tabSize": 2,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true,
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
     "editor.fontSize": 12,
     "[html]": {
       "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "[css]": {
-      "editor.defaultFormatter": "lonefy.vscode-JS-CSS-HTML-formatter"
+    "[markdown]": {
+      "editor.defaultFormatter": "yzhang.markdown-all-in-one"
     }
   },
   "extensions": {
