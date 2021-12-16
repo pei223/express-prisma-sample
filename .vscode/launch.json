@@ -19,6 +19,12 @@
         "REMOVE_CORS": true,
         "ENV": "dev"
       }
+    },
+    {
+      "name": "Debug express by npm script",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "npm run start:dev"
     }
   ]
 }
